@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="main">
+    <div>
+      <div id="nav">
+        <button id="prev" onclick="onPrevMonth()"><</button>
+        <div id="month-name"></div>
+        <button id="next" onclick="onNextMonth()">></button>
+      </div>
+      <div id="calendar"></div>
+    </div>
+    <div>
+      <div id="events" style="display:none">
+        <div id="add-event">
+          <input type="text" id="event-subject" />
+          <button id="btn-add-event" onclick="onSubmitEvent(this)">Tambah Event</button>
+        </div>
+        <div id="event-list">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+     body {
+        font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+        margin: 2em;
+        }
+
+        h1 {
+        font-style: italic;
+        color: #373fff;
+        }
+
+        .operator {
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+  </head>  
+  <body>
+    <h1>Cashier</h1>
+    <div>
+        <input type="text" placeholder="Item Name" id="name" />
+        <input type="number" placeholder="Quantity" id="qty" />
+        <input type="number" placeholder="Price" id="price" />
+
+        <button type="submit" id="add">Tambah</button>
+    </div>
+
+    <div id="answer">
+      
+    </div>
+  </body>
+  <script>
+    var arr = []
+    document.getElementById("add").addEventListener("click", add)
+    var ans = document.getElementById("answer")
+    function add () {
+        var nameEl = document.getElementById("name")
+        var priceEl = document.getElementById("price")
+        var qtyEl = document.getElementById("qty")
+
+        var name = nameEl.value
+        var price = priceEl.value
+        var qty = qtyEl.value
+
+        var newItem = {
+            name, price, qty, total: parseInt(qty) * parseInt(price)
+        }
+        arr.push(newItem)
+        nameEl.value = ''
+        priceEl.value = ''
+        qtyEl.value = ''
+        render()
+    }
+
+    function sum(total, num) {
+        return total + num;
+    }
+    function getTotal(item) {
+        var prices = arr.map(x => x.total)
+        var total = prices.reduce(sum)
+        return total
+    }
+
+    function render () {
+        var x = arr.map(val => `<li>Qty: ${val.qty}. Nama: ${val.name}; Price: ${val.price}; Total: ${val.total}</li>`)
+        var list = '<ul>'  + x.join('') + '</ul>'
+        ans.innerHTML = list + '<div>Total ' + getTotal() + '</div>'
+
+    }
+
+  </script>
+</html>

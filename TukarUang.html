@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+     body {
+        font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+        margin: 2em;
+        }
+
+        h1 {
+        font-style: italic;
+        color: #373fff;
+        }
+
+        .operator {
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+  </head>  
+  <body>
+    <h1>Tukar Uang</h1>
+    <div>
+        <div id="desc"></div>
+        <input type="text" placeholder="Money" id="money" />
+        <button type="submit" id="submit">Tukar</button>
+    </div>
+
+    <div id="answer">
+      
+    </div>
+  </body>
+  <script>
+      var pecahan = [5,2,1]
+      document.getElementById("submit").addEventListener("click", onClick)
+      var ans = document.getElementById("answer")
+      var desc = document.getElementById("desc")
+
+      desc.textContent = "Tukar uang-mu dengan pecahan " + pecahan.join(", ")
+
+      var sisa = 0
+      var str = []
+
+      // 5 = 2*2 + 1*1
+      // 6 = 5*1 + 1*1
+
+
+      function convert () {
+        for(var i = 0; i < pecahan.length; i++) {
+
+                var div = parseInt(sisa / pecahan[i])
+                var mod = parseInt(sisa) % parseInt(pecahan[i])
+                // var test = sisa
+                console.log({uang: pecahan[i], jumlah: div, sisa: mod})
+                if (sisa >= pecahan[i]) {
+                    if ( mod > 0) {
+                        sisa = mod
+                        str.push(div + ' buah uang ' + pecahan[i])
+                        break;
+                    } else {
+                        sisa = mod
+                        str.push(div + ' buah uang ' + pecahan[i])
+                        break;
+                    }
+                }
+           }
+      }
+
+      function onClick () {
+        str = [] 
+        var uang = document.getElementById("money")
+        sisa = uang.value
+          while(sisa > 0){
+            convert()
+          }
+        ans.textContent = str.join(", ")
+           
+      }
+      
+
+  </script>
+</html>

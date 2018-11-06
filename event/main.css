@@ -1,0 +1,37 @@
+#time {
+  margin-top: 15px;
+  display: flex;
+  flex-basis: 0;
+  flex-shrink: 1;
+  flex-direction: row;
+}
+
+.timezone-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 3px 0px 3px;
+  padding: 10px;
+  background: #f5f8f8;
+  border: dashed 1px gainsboro;
+}
+
+button {
+  height: 35px;
+}
+
+input {
+  height: 25px;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#event-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}

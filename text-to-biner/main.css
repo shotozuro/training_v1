@@ -1,0 +1,20 @@
+#main {
+  text-align: center;
+}
+input {
+  height: 25px;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+button {
+  height: 30px;
+  border-radius: 3px;
+  background: #5989f0;
+  color: #ffffff;
+}
+
+#result {
+  margin-top: 20px;
+}

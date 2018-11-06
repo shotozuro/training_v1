@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+     body {
+        font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+        margin: 2em;
+        }
+
+        h1 {
+        font-style: italic;
+        color: #373fff;
+        }
+
+        .operator {
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+  </head>  
+  <body>
+    <h1>RPS</h1>
+    <div>
+        <button class="choice" id="r">ROCK!</button>
+        <button class="choice" id="p">PAPER!</button>
+        <button class="choice" id="s">SCISSOR!</button>
+    </div>
+    <div id="answer">
+      
+    </div>
+  </body>
+  <script>
+
+    var a = document.querySelectorAll(".choice")
+    // console.log(comp )
+    for(var i=0; i < a.length; i++) {
+        a[i].addEventListener("click", onClick)
+    }
+    var ans = document.getElementById("answer")
+    
+    function onClick (e) {
+        var opt = ["r", "p", "s"]
+        var random = Math.floor((Math.random() * 3));
+        var comp = opt[random]
+        console.log('comp = ' + comp)
+        var selected = e.target.id
+        if (comp === "r") {
+            if (selected === "p") {
+                ans.textContent ="YOU WIN"
+            } else if (selected === "s") {
+                ans.textContent ="YOU LOSE"
+            } else {
+                ans.textContent = "DRAW"
+            }
+        } else if (comp === "p") {
+            if (selected === "r") {
+                ans.textContent ="YOU LOSE"
+            } else if (selected === "s") {
+                ans.textContent ="YOU WIN"
+            } else {
+                ans.textContent = "DRAW"
+            }
+        } else if (comp === "s") {
+            if (selected === "r") {
+                ans.textContent ="YOU WIN"
+            } else if (selected === "p") {
+                ans.textContent ="YOU LOSE"
+            } else {
+                ans.textContent = "DRAW"
+            }
+        }
+    }
+  </script>
+</html>

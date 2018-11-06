@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Meeting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="moment-timezone-with-data-2012-2022.js" defer></script>
+  <script src="moment.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="form">
+      <p>Event</p>
+      <div class="inputan">
+        <label for="subject">Subject</label>
+        <input placeholder="Event name" type="text" id="subject" />
+      </div>
+      <div class="inputan">
+        <label for="location">Location</label>
+        <input placeholder="Location" type="text" id="location" />
+      </div>
+      <div class="inputan">
+        <label for="from">From</label>
+        <input placeholder="Start date" type="text" id="from" />
+      </div>
+      <div class="inputan">
+        <label for="to">To</label>
+        <input placeholder="End date" type="text" id="to" />
+      </div>
+      <div class="inputan">
+        <label for="timezone">TimeZone</label>
+        <input placeholder="Timezone" type="text" id="timezone" />
+      </div>
+      <div id="action">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <div style="margin-left: 40px">
+      <p>Event List</p>
+      <input placeholder="time zone" type="text" id="tz" />
+      <button type="submit" id="find">Find</button>
+      <div id="list">
+
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

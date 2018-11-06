@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Schedulle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="main">
+    <div>
+      <button id="refresh">Refresh</button>
+    </div>
+    <div id="time" style="max-width: 400px;overflow: auto; overflow-x: scroll;">
+    </div>
+    <div id="event-section">
+      <h2>Event</h2>
+      <div id="addEvent">
+        <input type="text" placeholder="Event name" id="event-name" />
+        <input type="text" placeholder="Date and time" id="event-date" />
+        <input type="text" placeholder="City (Timezone)" id="event-timezone" />
+        <button type="submit" id="submitEvent">Submit</button>
+      </div>
+      <div id="detailEvent">
+        
+      </div>
+    </div>
+  </div>
+</body>
+<script src="moment.js"></script>
+<script src="moment-timezone-with-data-2012-2022.js"></script>
+
+</html>

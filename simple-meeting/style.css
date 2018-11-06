@@ -1,0 +1,42 @@
+#wrapper {
+  display: flex;
+  flex-direction: row;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+input {
+  height: 25px;
+}
+.inputan {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+button {
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#action {
+}
+
+#find {
+  height: 30px;
+}
+
+.eventName {
+  font-size: 24pt;
+}
+
+.eventLoc {
+  font-size: 20pt;
+}
+
+.content {
+  padding: 10px;
+  margin-bottom: 5px;
+}

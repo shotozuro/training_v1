@@ -1,0 +1,79 @@
+body {
+  font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#main {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+#refresh {
+  padding: 10px;
+}
+
+#action {
+  text-align: center;
+}
+
+.timezone-box {
+  color: #ffffff;
+  text-align: center;
+  height: 200px;
+  min-width: 270px;
+  background: #130f40;
+  padding: 10px;
+  margin: 2px;
+  display: block;
+  border-radius: 5px;
+}
+.timezone-box input {
+  width: 90%;
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 11pt;
+  border-color: transparent;
+}
+.time {
+  font-size: 20pt;
+}
+
+.plus-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#timezones {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+#event-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#event-section input {
+  height: 30px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 250px;
+  font-size: 10pt;
+}
+
+#event-section button {
+  padding: 10px;
+  font-size: 10pt;
+}
+
+.event-time {
+  background: #30336b;
+}
+
+#status {
+  color: red;
+}

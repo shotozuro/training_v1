@@ -1,0 +1,59 @@
+/* CSS files add styling rules to your content */
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 2em;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #373fff;
+  }
+  .player {
+    margin-bottom: 20px;
+  }
+
+  .block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .player1-blocks {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .player2-blocks {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .coord {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .poin {
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    font-size: 8  px;
+    color: red;
+  }

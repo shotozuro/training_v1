@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BattleShip</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>  
+  <body>
+    <div style="margin-right: 20px;">
+      <div id="board"></div>
+    </div>
+    <div id="action">
+      <div id="dice"></div>
+      <div>
+        <div>
+          <select name="direction">
+            <option value="hor">Horizontal</option>
+            <option value="ver">Vertical</option>
+          </select>
+        </div>
+        <button id="add-carrier" class="add-ship">Add Carrier</button>
+        <button id="add-battleship" class="add-ship">Add Battleship</button>
+        <button id="add-destroyer" class="add-ship">Add Destroyer</button>
+        <button id="add-submarine" class="add-ship">Add SubMarine</button>
+        <button id="add-patrol" class="add-ship">Add Patrol Boat</button>
+      </div>
+    </div>
+    <div id="cheat"></div>
+
+  </body>
+</html>

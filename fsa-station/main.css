@@ -1,0 +1,39 @@
+.btn {
+  padding: 10px;
+  margin: 3px;
+  flex: 1;
+  border-radius: 5px;
+}
+.btn-action {
+  background: #353b48;
+  color: #ffffff;
+}
+#action {
+  display: flex;
+  width: 400px;
+  padding: 5px;
+}
+#wrapper {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#station {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stationName {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20pt;
+}
+
+#status {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

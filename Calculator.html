@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+     body {
+        font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+        margin: 2em;
+        }
+
+        h1 {
+        font-style: italic;
+        color: #373fff;
+        }
+
+        .operator {
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+  </head>  
+  <body>
+    <h1>Calculator</h1>
+    <div>
+        <div>
+            <input id="input" type="text" />
+        </div>
+        <div>
+            <input id="input2" type="text" />
+        </div>
+      
+      <button class="operator" id="plus"> + </button>
+      <button class="operator" id="minus"> - </button>
+      <button class="operator" id="multiply"> * </button>
+      <button class="operator" id="divide"> / </button>
+    </div>
+    <div id="answer">
+      
+    </div>
+  </body>
+  <script>
+
+    var operators = document.querySelectorAll(".operator")
+    for (var i = 0; i < operators.length; i++) {
+        operators[i].addEventListener("click", onClick)
+    }
+
+    var selectedOperator = ""
+    var lastInput = 0
+    var str = ""
+
+    function onClick (e) {
+        var bilangan = []
+        var op = e.target.id
+        var input = parseInt(document.getElementById("input").value)
+        var input2 = parseInt(document.getElementById("input2").value)
+        var ans = document.getElementById("answer")
+        var operator
+        var result = 0
+        switch (op) {
+            case 'plus': operator = "+"; break;
+            case 'minus': operator = "-"; break;
+            case 'multiply': operator = "*"; break;
+            case 'divide': operator = "/"; break;
+        }
+        var str = input + operator + input2
+        if (op !== "result") {
+            selectedOperator = e.target.id
+            document.getElementById("input").value = ""
+            document.getElementById("input2").value = ""
+            switch(op) {
+                case 'plus': result = input + input2; break;
+                case 'minus': result = input - input2; break;
+                case 'multiply': result = input * input2; break;
+                case 'divide': result = input / input2; break;
+            }
+            ans.textContent = str + " = " +  result
+        } else {
+            document.getElementById("answer").textContent = "" 
+        }
+        e.preventDefault()
+    }
+  </script>
+</html>

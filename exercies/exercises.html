@@ -1,0 +1,52 @@
+<script>
+    function render (text) {
+      const list = text.trim().split(" ")
+      const maxStringLength = getMaxTextLength(list)
+      const borderWidth = maxStringLength + 2
+      list.forEach((text, index) => {
+        if (index == 0) {
+          printCharacter("*", borderWidth)
+        }
+
+        printTextWithSpaces(text, maxStringLength - text.length)
+        
+        if (index == list.length - 1) {
+          printCharacter("*", borderWidth)
+        }
+      });
+    }
+
+    function printTextWithSpaces (text, spaceSize) {
+      let spaces = loopChar(" ", spaceSize)
+      // use String.padEnd(length, sisa)
+      console.log("*" + text + spaces + "*")
+    }
+
+    function printCharacter (char, size) {
+      let charaters = loopChar(char, size)
+      console.log(charaters)
+    }
+
+    function loopChar (char, size) {
+      let charaters = ""
+      for (let i = 0; i < size; i++) {
+        charaters += "" + char
+      }
+
+      return charaters
+    }
+
+    function inputText (text) {
+      render(strings)
+    }
+
+    function getMaxTextLength (list) {
+      // use destructure array more simple
+      // const a = [1,2,4,6,2,33,7,32,6,21]
+      // const maxNumber = Math.max(...a)
+      return list
+        .map(str => str.length)
+        .reduce(( acc, curr ) => Math.max( acc, curr ));
+    }
+
+  </script>

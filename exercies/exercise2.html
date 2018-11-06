@@ -1,0 +1,22 @@
+<html>
+  <head><title></title></head>
+  
+  <body></body>
+  <script>
+
+    function inputText (text) {
+      console.log({
+        letter: getCharsWithRegex(text, /[A-Za-z]/g),
+        number: getCharsWithRegex(text, /\d/g),
+        space: getCharsWithRegex(text, /\s/g),
+        other: getCharsWithRegex(text, /[^A-Za-z\d\s]/g),
+      })
+    }
+
+    function getCharsWithRegex (string, reg) {
+      const arrayOfChars = string.match(reg)
+      return arrayOfChars && arrayOfChars.length || 0
+    }
+
+  </script>
+</html>
